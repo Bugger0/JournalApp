@@ -1,0 +1,32 @@
+25-05-26 10:24:08.903 [main] INFO  n.p.JournalApp.JournalAppApplication - Starting JournalAppApplication using Java 17.0.7 with PID 1416 (C:\Users\ZMI4\Downloads\JournalApp\JournalApp\target\classes started by ZMI4 in C:\Users\ZMI4\Downloads\JournalApp\JournalApp) 
+25-05-26 10:24:08.930 [main] INFO  n.p.JournalApp.JournalAppApplication - No active profile set, falling back to 1 default profile: "default" 
+25-05-26 10:24:11.465 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+25-05-26 10:24:11.482 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+25-05-26 10:24:11.487 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat] 
+25-05-26 10:24:11.487 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39] 
+25-05-26 10:24:11.612 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+25-05-26 10:24:11.613 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2528 ms 
+25-05-26 10:24:11.640 [main] ERROR o.s.b.w.e.tomcat.TomcatStarter - Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtFilter': Unsatisfied dependency expressed through field 'userDetailsService': Error creating bean with name 'userDetailsServiceImpl': Unsatisfied dependency expressed through field 'userRepository': No qualifying bean of type 'net.practice.JournalApp.repository.UserRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)} 
+25-05-26 10:24:11.677 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat] 
+25-05-26 10:24:11.686 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server 
+25-05-26 10:24:11.709 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled. 
+25-05-26 10:24:11.750 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field userRepository in net.practice.JournalApp.service.UserDetailsServiceImpl required a bean of type 'net.practice.JournalApp.repository.UserRepository' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'net.practice.JournalApp.repository.UserRepository' in your configuration.
+ 
